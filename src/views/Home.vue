@@ -22,14 +22,14 @@
 </template>
 
 <script>
-import PesquisaVagas from '@/components/PesquisaVagas.vue'
 import Indicador from '@/components/Indicador.vue'
+import PesquisaVagas from '@/components/PesquisaVagas.vue'
 
 export default {
   name: 'Home',
   components: {
-    PesquisaVagas,
-    Indicador
+    Indicador,
+    PesquisaVagas
   }
 }
 </script>

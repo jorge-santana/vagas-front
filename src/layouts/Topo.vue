@@ -9,13 +9,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample07">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#home" @click="selecionar('Home')">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#publicar-vaga">Publicar Vaga</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#publicar-curriculo">Publicar Currículo</a>
+            <a class="nav-link" href="#publicar-vaga" @click="selecionar('PublicarVaga')">Publicar Vaga</a>
           </li>
         </ul>
       </div>
@@ -25,7 +22,12 @@
 
 <script>
 export default {
-  name: 'Topo'
+  name: 'Topo',
+  methods: {
+    selecionar (c) {
+      this.$emit('mudarConteudo', c)
+    }
+  }
 }
 </script>
 

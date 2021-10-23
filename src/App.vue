@@ -1,18 +1,21 @@
 <template>
   <div>
-    <Topo />
-    <Home />
+    <Topo @mudarConteudo="view = $event" />
+    <Conteudo :componente="view" />
   </div>
 </template>
 
 <script>
-import Home from './views/Home.vue'
+import Conteudo from './layouts/Conteudo.vue'
 import Topo from './layouts/Topo.vue'
 
 export default {
   name: 'App',
+  data: () => ({
+    view: 'Home'
+  }),
   components: {
-    Home,
+    Conteudo,
     Topo
   }
 }
